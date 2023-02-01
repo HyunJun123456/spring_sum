@@ -41,5 +41,30 @@ public class Spring {
 		 * */
 		
 		
+		/*
+		 * JPA란 무엇인가요?
+		 * RAM (전기로 데이터가 흐름) 휘발성
+		 * 컴퓨터가 꺼지면 사라짐
+		 * persistence: 하드디스크에 저장하는거: 하나의 데이터가 영구히 기록될 수 있게함
+		 * 자바에 있는 데이터를 영구히 저장할 수 있게 만들어주는 API
+		 * API: Application Programming Interface
+		 * 상하관계가 존재하는 약속
+		 * 프로토콜은 상하관계가 존재하지 않음
+		 * 1. Java Persistence API 이다.
+		 * 2. JPA는 ORM 기술이다.
+		 * ORM (Object Relational Mapping)
+		 * 자바는 데이터베이스에 있는 타입을 가지지 않는다, -> 모델링 해야함
+		 * DB 세상에 있는 데이터를 자바 세상에 모델링!!
+		 * TRM이 아니라 ORM 상황이 역전되는 거임
+		 * Class를 먼저 만들고 class를 통해 자동으로 DB를 만든다.
+		 * JPA의 인터페이스 규칙을 지키면 가능함
+		 * 3. JPA는 영속성 컨텍스트를 가지고 있다.
+		 * 
+		 * 
+		 * */
+		
+		
+		
+		
 	}
 }
