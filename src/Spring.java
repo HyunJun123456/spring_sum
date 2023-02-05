@@ -141,6 +141,24 @@ public class Spring {
 		 * 
 		 * web.xml은 문지기의 역할을 해줌.
 		 * get 방식: select
+		 * */
+		
+		/*
+		 * .do(특정주소)
+		 * 요청이 URI, 혹은 자바파일
+		 * 톰캣으로 감
+		 * request, response 객체를 만듦
+		 * 객체로 만들면 request.함수를 사용할 수 있음
+		 * web.xml -> FrontController 
+		 * .do는 frontController 너가 낚아채
+		 * 자원을 찾아갈 수 있게 request를 함
+		 * 기존에 있는 request와 response를 유지하는 방법 -> requestDispatcher
+		 * 새로운 요청이 생기기 때문에 request와 response가 새롭게 new 될 수 있음.
+		 * requestDispatcher를 통해 request와 response를 그대로 사용할 수 있음.
+		 * DispatchServlet
+		 * : FrontController 패턴을 직접 짜거나 RequestDispatcher를 직접 구현할 필요가 없다.
+		 * 왜냐하면 스프링에는 DispatchServlet이 있기 때문이다. 
+		 * DispatchServlet은 FrontController 패턴 + RequestDispatcher이다.
 		 * 
 		 * */
 		
