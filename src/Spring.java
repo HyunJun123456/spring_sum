@@ -126,5 +126,24 @@ public class Spring {
 		 * 스레드를 많이 만들면 대기는 안하지만 3초 걸릴게 6초로 딜레이 됨
 		 * 스레드를 재사용해서 빠르다.
 		 * */
+		
+		/*
+		 * web.xml은 무엇인가요?
+		 * ServletContext의 초기 파라미터
+		 * Session의 유효시간 설정
+		 * Servlet/JSP에 대한 정의
+		 * Servlet/JSP 매핑
+		 * Mime Type 매핑
+		 * Welcome File List
+		 * Error Pages 처리
+		 * 리스너/필터 설정
+		 * 보안
+		 * 
+		 * web.xml은 문지기의 역할을 해줌.
+		 * get 방식: select
+		 * 
+		 * */
+		
+		
 	}
 }
