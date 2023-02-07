@@ -162,6 +162,49 @@ public class Spring {
 		 * 
 		 * */
 		
+		/*
+		 * ApplicationContext가 무엇인가요?
+		 * request -> web.xml -> DispatchServlet (컴포넌트 스캔, src 내부에 있는 모든 파일 new 해줌) 주소 분배
+		 * static -> 메인 메소드가 실행 되기 전부터 떠있음
+		 * 자바파일 -> 객체! (생성과 사라짐이 존재) 특정한 타이밍에 메모리에 뜬다
+		 * 어노테이션들을 메모리에 띄운다.
+		 * web.xml에 다음에 ContextLoaderListener가 있음
+		 * 요청한 사람에 따라서 스레드를 20개 만든다고 약속하면
+		 * 각각의 스레드는 독립적임
+		 * 요청은 1개지만 스레드는 여러개가 가능
+		 * root-applicationContext 파일을 읽는데 xml로 커스텀 할 수 있음
+		 * ContextLoaderListener가 공통적으로 쓰는 애들의 메모리를 띄워줌
+		 * ApplicationContext의 종류에는 두가지가 있다.
+		 * root-applicationContext
+		 * - Service, Repository 등을 스캔
+		 * - DB 관련 객체를 생성 (스캔이란: 메모리에 로딩)
+		 * - ContextLoaderListener에 의해 실행
+		 * - ContextLoaderListener를 실행해주는 녀석은 web.xml이기 때문에
+		 * root-applicationContext에서는 servlet-applicationContext보다 먼저 로드
+		 * servlet에서는 root가 로드한 객체를 참조할 수 있지만 그 반대는 불가능
+		 * 
+		 * servlet-applicationContext
+		 * - ViewResolver, Interceptor, MultipartResolver 객체를 생성
+		 * - Controller, RestController 스캔
+		 * - 해당 파일은 DispatchServlet에 의해 실행
+		 * - 웹만 바라봄
+		 * 
+		 * @Bean을 통해 메모리에 띄울 수 있음
+		 * 필요할 때 getBean이라는 메소드를 통하여 호출하여 메모리에 로드함
+		 * 필요할 때 호출하여 lazy-loading이 가능함
+		 * 
+		 * */
+		
+		/*
+		 * 응답(Response) 하는 방법
+		 * 요청 주소에 따른 적절한 컨트롤로 요청 (Handler Mapping)
+		 * html파일을 응답할지 Data를 응답할지 결정해야 하는데 html 파일을 응답하게 되면
+		 * ViewResolver가 관여하게 됨
+		 * Data를 응답하게 되면 MessageConverter가 작동하게 되는데
+		 * 메시지를 컨버팅할 때 기본전략은 json임
+		 * 
+		 * */
+		
 		
 	}
 }
